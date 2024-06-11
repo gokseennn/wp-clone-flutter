@@ -10,6 +10,7 @@ enum HttpMethod {
 }
 
 class ApiService extends GetxService {
+  final String baseUrl = "http://localhost:3000";
   Future<void> _saveCookie(String cookie) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('cookie', cookie);
@@ -37,11 +38,11 @@ class ApiService extends GetxService {
       http.Response response;
       switch (method) {
         case HttpMethod.GET:
-          response = await http.get(Uri.parse(url), headers: headers);
+          response = await http.get(Uri.parse(baseUrl + url), headers: headers);
           break;
         case HttpMethod.POST:
           response = await http.post(
-            Uri.parse(url),
+            Uri.parse(baseUrl + url),
             headers: headers,
             body: data != null ? json.encode(data) : null,
           );

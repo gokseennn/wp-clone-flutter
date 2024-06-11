@@ -1,4 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:wp_clone/general_ms/otp_screen/controller/otp_binding.dart';
+import 'package:wp_clone/general_ms/otp_screen/controller/otp_repository.dart';
 import 'package:wp_clone/general_ms/otp_screen/view/otp_screen.dart';
 import 'package:wp_clone/general_ms/phone_auth_screen/controller/phone_auth_binding.dart';
 import 'package:wp_clone/general_ms/phone_auth_screen/view/phone_auth_screen.dart';
@@ -18,6 +20,7 @@ class GeneralRoutes {
     GetPage(
       name: OtpScreen.routeName,
       page: () => const OtpScreen(),
+      binding: OtpBinding(),
     ),
   ];
 }
