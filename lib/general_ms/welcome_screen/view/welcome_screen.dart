@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:wp_clone/general_ms/phone_auth_screen/view/phone_auth_screen.dart';
 import 'package:wp_clone/theme.dart';
 import 'package:wp_clone/general_ms/welcome_screen/view/components/primary_button.dart';
 
@@ -54,7 +56,7 @@ class WelcomeScreen extends StatelessWidget {
                   width: 320,
                   child: PrimaryButton(
                     title: "AGREE AND CONTINUE",
-                    onPressed: () {},
+                    onPressed: () => Get.toNamed(PhoneAuthScreen.routeName),
                   ),
                 ),
                 const Spacer(flex: 2),
