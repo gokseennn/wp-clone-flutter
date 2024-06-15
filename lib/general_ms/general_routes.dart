@@ -1,4 +1,5 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:wp_clone/general_ms/home_screen/home_screen.dart';
 import 'package:wp_clone/general_ms/otp_screen/controller/otp_binding.dart';
 import 'package:wp_clone/general_ms/otp_screen/controller/otp_repository.dart';
 import 'package:wp_clone/general_ms/otp_screen/view/otp_screen.dart';
@@ -21,6 +22,10 @@ class GeneralRoutes {
       name: OtpScreen.routeName,
       page: () => const OtpScreen(),
       binding: OtpBinding(),
+    ),
+    GetPage(
+      name: HomeScreen.routeName,
+      page: () => const HomeScreen(),
     ),
   ];
 }
