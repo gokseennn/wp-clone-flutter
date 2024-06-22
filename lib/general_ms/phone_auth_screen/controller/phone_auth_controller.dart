@@ -9,7 +9,7 @@ class PhoneAuthController extends GetxController {
   void sendVerificationCode() async {
     final res = await _repository.sendVerifyCode(phoneController.text);
     if (res) {
-      Get.toNamed(OtpScreen.routeName);
+      Get.toNamed(OtpScreen.routeName, arguments: phoneController.text);
     } else {
       Get.snackbar("Error", "Something went wrong");
     }
